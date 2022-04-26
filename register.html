@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>User Registration System</title>
+</head>
+<body>
+    <!--inputs for registration-->
+    <header class="site-init">
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Register a new user</h2>
+        <div class="form-container">
+            <!--
+               
+                payment method
+            -->
+            <div class="form-control">
+                <label>First Name: </label>
+                <input type="text" class="form-control" id="txtFname" placeholder="Enter your first name">
+            </div>
+            <div class="form-control">
+                <label>Last Name: </label>
+                <input type="text" class="form-control" id="txtLname" placeholder="Enter your last name">
+            </div>
+            <div class="form-control">
+                <label>Email: </label>
+                <input type="text" class="form-control" id="txtEmail" placeholder="Enter your Email">
+            </div>
+            <div class="form-control">
+                <label>Password: </label>
+                <input type="text" class="form-control" id="txtPassword" placeholder="Enter your password">
+            </div>
+            </div>
+            <div class="form-control">
+                <label>Gender: </label>
+                <input type="text" class="form-control" id="txtGender" placeholder="Enter your gender">
+            </div>
+            <div class="form-control">
+                <label>Age: </label>
+                <input type="text" class="form-control" id="txtAge" placeholder="Enter your age">
+            </div>
+            <div class="form-control">
+                <label>Address: </label>
+                <input type="text" class="form-control" id="txtAddress" placeholder="Enter your address">
+            </div>
+            <div class="form-control">
+                <label>Phone Number: </label>
+                <input type="text" class="form-control" id="txtPhone" placeholder="Enter your phone number">
+            </div>
+            <div>
+                <label>Payment Method:</label>
+                <select class = "form-control" id="selPayment">
+                    <option value="Mastercard">MasterCard</option>
+                    <option value="Visa">Visa</option>
+                    <option value ="American Express">American Express</option>
+                    <option value ="Pay in store">Pay in Store</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label>Favorite Color: </label>
+                <input type="text" class="form-control" id="txtColor" placeholder="Enter your favorite color">
+            </div>
+            <button onclick="register();">Register</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/register.js"></script>
+</body>
+</html>
