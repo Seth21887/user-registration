@@ -13,7 +13,22 @@ class user {
         this.color = color;
     }
 }
+function isValid(user){
+    let valid=true;
+    $("input").removeClass("input-error");
+    if(user.email.length==0){
+        valid=false;
+        console.error("Invalid email");
+        $("#txtEmail").addClass("input-error");
+    }
+    if(user.password.length==0){
+        valid=false;
+        console.error("Invalid password");
+        $("#txtPassword").addClass("input-error");
+    }
+    return valid;
 
+}
 function register(){
     let inputFName= $("#txtfName").val(); //getting the value
     let inputLName= $("#txtLname").val();
@@ -26,8 +41,14 @@ function register(){
     let inputPayment = $("#selPayment").val();
     let inputColor = $("#txtColor").val();
 
-    let newUser = (inputFName,inputLName,inputEmail,inputPassword,inputGender,inputAge,inputAddress,inputPhone,inputPayment,inputColor);
+    let newUser = new user(inputFName,inputLName,inputEmail,inputPassword,inputGender,inputAge,inputAddress,inputPhone,inputPayment,inputColor);
+
+    if(isValid(newUser)){
+        saveUser(newUser); //this function is on storeManager.js
+    }
+
     console.log(inputFName,inputLName,inputEmail,inputPassword,inputGender,inputAge,inputAddress,inputPhone,inputPayment,inputColor);
+    
 }
 
 function init(){
