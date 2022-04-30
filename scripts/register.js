@@ -29,6 +29,20 @@ function isValid(user){
     return valid;
 
 }
+function validatePass(){
+    console.log("Validating Password");
+    //get the value from the form
+    let txtPass=$("#txtPassword"); //using a variable because we want to travel DOM only once
+    let password=txtPass.val();
+    //compare if the password is less than six characters? (if statement)
+    if(password.length<6){
+        txtPass.css("background","#ff9898");
+    }else{
+        txtPass.css("background","#64ce66"); //jquery function to change CSS
+    }
+}
+
+
 function register(){
     let inputFName= $("#txtfName").val(); //getting the value
     let inputLName= $("#txtLname").val();
@@ -45,17 +59,18 @@ function register(){
 
     if(isValid(newUser)){
         saveUser(newUser); //this function is on storeManager.js
+        $('input').val(""); //clears the inputs
     }
+    
 
     console.log(inputFName,inputLName,inputEmail,inputPassword,inputGender,inputAge,inputAddress,inputPhone,inputPayment,inputColor);
     
 }
 
 function init(){
-    console.log("Init function");
-    //create a user and display the new user on the console
-let user1 = new user("Seth","LaFountain","seth.d.lafountain@gmail.com","password","Male","35","San Diego, CA","619-713-8267","red");
-let user2 = new user("Jason","Cerilli","jason@gmail.com","test1234");
-console.log(user1,user2);
+    console.log("Register");
+    //hook events
+    $("#txtPassword").keyup(validatePass); //executed everytime that the key is up
 }
+
 window.onload=init; //using window.onload allows the entire HTML to render before executing the INIT function
