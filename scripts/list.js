@@ -1,11 +1,27 @@
 //this function needs an array to make it work
 function displayUsers(usersArray){
     //travel the array (array name is users)
+    let tr="";
     for(let i=0;i<usersArray.length;i++){
         let user = usersArray[i];
         console.log(user);
+        tr+=`
+        <tr id="${user.id}">
+            <td>${user.fName}</td>
+            <td>${user.lName}</td>
+            <td>${user.email}</td>
+            <td>${user.password}</td>
+            <td>${user.gender}</td>
+            <td>${user.age}</td>
+            <td>${user.address}</td>
+            <td>${user.phone}</td>
+            <td>${user.payment}</td>
+            <td>${user.color}</td>
+        </tr>
+        `;
         //create the tmp, row, etc.
     }
+    document.getElementById("usersTable").innerHTML=tr;
     //get each user
     //display the users
 

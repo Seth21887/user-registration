@@ -1,4 +1,5 @@
 //create a User constructor
+let c=0;
 class user {
     constructor(fName, lName, email, password, gender, age, address, phone,payment, color) {
         this.firstName = fName;
@@ -11,6 +12,7 @@ class user {
         this.phone = phone;
         this.payment = payment;
         this.color = color;
+        // this.id=c++;
     }
 }
 function isValid(user){
@@ -44,7 +46,7 @@ function validatePass(){
 
 
 function register(){
-    let inputFName= $("#txtfName").val(); //getting the value
+    let inputFName= $("#txtFname").val(); //getting the value
     let inputLName= $("#txtLname").val();
     let inputEmail = $("#txtEmail").val();
     let inputPassword = $("#txtPassword").val();

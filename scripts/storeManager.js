@@ -18,6 +18,6 @@ function readUsers(){
     }else{
         //we have data
         let list = JSON.parse(data); //parsing JSON to object
-        return list; //return the list of objects
+        return list; //return the array of objects
     }
 }
