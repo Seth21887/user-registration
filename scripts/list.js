@@ -7,8 +7,8 @@ function displayUsers(usersArray){
         console.log(user);
         tr+=`
         <tr id="${user.id}">
-            <td>${user.fName}</td>
-            <td>${user.lName}</td>
+            <td>${user.firstName}</td>
+            <td>${user.lastName}</td>
             <td>${user.email}</td>
             <td>${user.password}</td>
             <td>${user.gender}</td>

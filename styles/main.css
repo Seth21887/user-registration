@@ -76,3 +76,8 @@ main{
     padding:0.5rem;
     border-radius: 5px;
 }
+
+table th{
+    padding:10px;
+    color: #004b51;
+}
