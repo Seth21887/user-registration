@@ -12,7 +12,7 @@ class user {
         this.phone = phone;
         this.payment = payment;
         this.color = color;
-        // this.id=c++;
+        this.id=c++;
     }
 }
 function isValid(user){

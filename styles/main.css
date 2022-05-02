@@ -81,3 +81,7 @@ table th{
     padding:10px;
     color: #004b51;
 }
+.usersTable{
+    color:#004b51;
+    line-height:25px;
+}
