@@ -39,9 +39,17 @@ function validatePass(){
     //compare if the password is less than six characters? (if statement)
     if(password.length<6){
         txtPass.css("background","#ff9898");
+        displayError("The password is too short");
     }else{
         txtPass.css("background","#64ce66"); //jquery function to change CSS
+        hideError();
     }
+}
+function displayError(msg){
+    $("#alertError").removeClass("hide").text(msg);
+}
+function hideError(){
+    $("#alertError").addClass("hide");
 }
 
 
@@ -62,6 +70,8 @@ function register(){
     if(isValid(newUser)){
         saveUser(newUser); //this function is on storeManager.js
         $('input').val(""); //clears the inputs
+    }else{
+        displayError("Please complete all the fields.");
     }
     
 

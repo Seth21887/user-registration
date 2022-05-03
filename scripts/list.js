@@ -21,7 +21,8 @@ function displayUsers(usersArray){
         `;
         //create the tmp, row, etc.
     }
-    document.getElementById("usersTable").innerHTML=tr;
+    // document.getElementById("usersTable").innerHTML=tr;
+    $("#usersTable").append(tr);
     //get each user
     //display the users
 
